@@ -1,0 +1,143 @@
+log.js:15 (Glean.core.Upload.PingUploadManager) Ping 7fedbc60-eeca-42fc-ba28-6c727be65b9d successfully sent 200.
+log.js:15 (Glean.core.Upload.PingUploadManager) Ping 9ccf24aa-56ee-468b-a91a-801bad556531 successfully sent 200.
+log.js:15 (Glean.core.Upload.PingUploadManager) Ping 75be986e-5cce-4547-9110-a7d7ba798a45 successfully sent 200.
+y=4*x+5;
+VM11368:1 Uncaught ReferenceError: x is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM11368:1
+x=8;
+8
+x
+8
+y=4*x+5;
+37
+x=5
+5
+y=4*x+5;
+25
+typeof x
+'number'
+typeof y
+'number'
+y="4*x+5;"
+'4*x+5;'
+y
+'4*x+5;'
+typeof y
+'string'
+x="5"
+'5'
+typeof x
+'string'
+x + y
+'54*x+5;'
+m=true
+true
+m="true"
+'true'
+typeof m
+'string'
+m=true
+true
+typeof m
+'boolean'
+a=false
+false
+a
+false
+x == "5"
+true
+ok = x=="5"
+true
+x="hello"
+'hello'
+typeof x
+'string'
+ok = x=="hello"
+true
+ok
+true
+typeof ok
+'boolean'
+ok = x=="bay"
+false
+ok
+false
+data = [4,34,24,56,61,26]
+(6) [4, 34, 24, 56, 61, 26]0: 41: 342: 243: 564: 615: 26length: 6[[Prototype]]: Array(0)
+typeof data
+'object'
+data[3]
+56
+data[0]
+4
+data[1]
+34
+data[2]
+24
+data[3]
+56
+data[4]
+61
+data[5]
+26
+data[4] = 18
+18
+data
+(6) [4, 34, 24, 56, 18, 26]0: 41: 342: 243: 564: 185: 26length: 6[[Prototype]]: Array(0)
+data[2] == 5
+false
+data[2] == 24
+true
+r =null
+null
+r = undefined
+undefined
+name = "Bob"
+'Bob'
+email="bob@gmail.com"
+'bob@gmail.com'
+age=41
+41
+address="USA, NY, srt 12/18"
+'USA, NY, srt 12/18'
+name2="Anna"
+'Anna'
+email@="anna@ukr.net"
+VM12941:1 Uncaught SyntaxError: Invalid or unexpected token
+email="anna@ukr.net"
+'anna@ukr.net'
+profile1 = ["Bob", "bob@gmail.com", 41, "USA, NY, srt 12/18"]
+(4) ['Bob', 'bob@gmail.com', 41, 'USA, NY, srt 12/18']
+profile2 = ["Anna", "anna@ukr.net", 31, "UA, Kyiv, str 12"]
+(4) ['Anna', 'anna@ukr.net', 31, 'UA, Kyiv, str 12']
+profile1
+(4) ['Bob', 'bob@gmail.com', 41, 'USA, NY, srt 12/18']
+profile2
+(4) ['Anna', 'anna@ukr.net', 31, 'UA, Kyiv, str 12']0: "Anna"1: "anna@ukr.net"2: 313: "UA, Kyiv, str 12"length: 4[[Prototype]]: Array(0)
+profile1 = {name:"Bob", email: "bob@gmail.com", age: 41, address: "USA, NY, srt 12/18"}  
+{name: 'Bob', email: 'bob@gmail.com', age: 41, address: 'USA, NY, srt 12/18'}address: "USA, NY, srt 12/18"age: 41email: "bob@gmail.com"name: "Bob"[[Prototype]]: Object
+profile1
+{name: 'Bob', email: 'bob@gmail.com', age: 41, address: 'USA, NY, srt 12/18'}address: "USA, NY, srt 12/18"age: 41email: "bob@gmail.com"name: "Bob"[[Prototype]]: Object
+typeof profile1
+'object'
+profile1.address
+'USA, NY, srt 12/18'
+profile1['address']
+'USA, NY, srt 12/18'
+profile1.age
+41
+profile1.address = "Canada, MR"
+'Canada, MR'
+profile1
+{name: 'Bob', email: 'bob@gmail.com', age: 41, address: 'Canada, MR'}address: "Canada, MR"age: 41email: "bob@gmail.com"name: "Bob"[[Prototype]]: Object
+typeof profile1.age
+'number'
+typeof profile1.address
+'string'
+adderss1 = {country: "Ukraine", city: "Kyiv", "street":"Shevchenka"}
+{country: 'Ukraine', city: 'Kyiv', street: 'Shevchenka'}
+profile1.address = adderss1
+{country: 'Ukraine', city: 'Kyiv', street: 'Shevchenka'}
+profile1
+{name: 'Bob', email: 'bob@gmail.com', age: 41, address: {…}}address: {country: 'Ukraine', city: 'Kyiv', street: 'Shevchenka'}city: "Kyiv"country: "Ukraine"street: "Shevchenka"[[Prototype]]: Objectage: 41email: "bob@gmail.com"name: "Bob"[[Prototype]]: Object

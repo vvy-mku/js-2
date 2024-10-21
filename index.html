@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <title>Мій JS файл</title>
+    </head>
+    <body>
+        <h1 id="head1">Моя сторінка</h1>
+        <h1 id="head2" style="display: none;">Новий заголовок сторінки</h1>
+
+        <div id="main_block" style="border: 1px solid black;">
+            Текстовий вміст головного блоку
+        </div>
+
+        <script>
+            console.log('Hello');
+
+            function my_function(x, m) {
+                y = x * m;
+                return y;
+            }
+
+            function define_is_zero(x) {
+                if (x == 0) {
+                    console.log('x рівний нулю');
+                } else {
+                    console.log('x не рівний нулю');
+                }
+            }
+
+            function function2(x) {
+                if (x == 0) {
+                    return x;
+                }
+                if (x > 0) {
+                    return x * x;   
+                }
+                return x + 100;
+            }
+
+            h1Element = document.getElementById('head1');
+            h1Element.style.color = 'red';
+            h1Element.innerText = "Новий текст заголовку";
+            h1Element.style.display = 'none';
+
+            h1Element2 = document.getElementById('head2')
+            h1Element2.style.display = 'block';
+
+
+            a = function (x) {
+                return x + 2;
+            }
+
+
+            profile = {
+                age: 31, // поле об'єкта
+                first_name: "Alex", // поле об'єкта
+                last_name: "Hillton", // поле об'єкта
+                getFullName: function() { // метод об'єкта
+                    return this.first_name + ' ' + this.last_name;
+                }
+            }
+
+            console.log(profile);
+
+            newElement = document.createElement('div');
+            newElement.style.color = 'red';
+            text = document.createTextNode('мій текст');
+            newElement.appendChild(text);
+
+            mainBlock = document.getElementById('main_block');
+            mainBlock.appendChild(newElement);
+
+
+            // Буде отримувати профіль користувача (об'єкт)
+            // Повертати html елемент з дочірніми елементами що відображають характеристики профілю
+            function generateProfileBlock(profile) {
+                divBlock = document.createElement('div');
+                divBlock.style.border = '1px solid grey';
+                divBlock.style.background = 'lightblue';
+                divBlock.style.padding = '20px';
+                divBlock.style.margin = '20px';
+
+                pName = document.createElement('p');
+                pText = document.createTextNode('Name: ' + profile.first_name);
+                pName.appendChild(pText);
+
+                divBlock.appendChild(pName);
+
+                pLastName = document.createElement('p');
+                lastNameText = document.createTextNode('Last name: ' + profile.last_name);
+                pLastName.appendChild(lastNameText);
+
+                divBlock.appendChild(pLastName);
+
+                pAge = document.createElement('p')
+                ageText = document.createTextNode('Age: ' + profile.age);
+                pAge.appendChild(ageText);
+
+                divBlock.appendChild(pAge);
+
+                return divBlock;
+            }
+
+            profileBlock = generateProfileBlock(profile);
+
+            mainBlock.appendChild(profileBlock);
+
+
+
+        </script>
+        <!-- <div style="border: 1px solid grey; background: lightblue; padding: 20px; margin: 20px;">
+            <p>Name: Bob</p>
+            <p>Last name: Hillton</p>
+            <p>Age: 31</p>
+        </div> -->
+    </body>
+</html>
