@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Вивченя DOM подій</title>
+    </head>
+    <body>
+        <div style="margin: 200px;">
+            <p>
+                Email:<input id="email" value="" /><br/>
+                <span id="invalidEmail" style="color: red;display: none;">Invalid email</span>
+            </p>
+            <p>
+                <button id="resetButton">Reset</button>
+                <button id="submitButton">Submit</button>
+            </p>
+        </div>
+        <!-- alex@gmail.com -->
+        <script>
+            submitFunction = function() {
+                console.log('Email надіслано');
+            }
+
+            submitButton = document.getElementById('submitButton');
+            
+            invalidEmail = document.getElementById('invalidEmail');
+
+            emailInput = document.getElementById("email");
+            emailInput.addEventListener("keyup", function () {
+                if (emailInput.value == "alex@gmail.com") {
+                    invalidEmail.style.display="none";
+                    submitButton.addEventListener("click", submitFunction);
+                } else {
+                    invalidEmail.style.display="block";
+                    submitButton.removeEventListener('click', submitFunction);
+                }
+            })
+
+            resetButton = document.getElementById("resetButton");
+            resetButton.addEventListener("click", function() {
+                emailInput.value = "";
+            })
+        </script>
+    </body>
+</html>
