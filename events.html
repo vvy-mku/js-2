@@ -3,41 +3,30 @@
         <title>Вивченя DOM подій</title>
     </head>
     <body>
+        <!-- Потрібно щоб JS код виконувався тільки після того як завантажеться весь html -->
+        <script src="./events.js" ></script>
+
+
+
         <div style="margin: 200px;">
             <p>
                 Email:<input id="email" value="" /><br/>
                 <span id="invalidEmail" style="color: red;display: none;">Invalid email</span>
             </p>
             <p>
+                Password:<input id="password" value="" /><br/>
+                <span id="invalidPassword" style="color: red;display: none;">Invalid password</span>
+            </p>
+            <p>
                 <button id="resetButton">Reset</button>
                 <button id="submitButton">Submit</button>
             </p>
         </div>
-        <!-- alex@gmail.com -->
-        <script>
-            submitFunction = function() {
-                console.log('Email надіслано');
-            }
+        <div>
+            <button id="plus">+</button>
+            <button id="minus">-</button>
+        </div>
 
-            submitButton = document.getElementById('submitButton');
-            
-            invalidEmail = document.getElementById('invalidEmail');
-
-            emailInput = document.getElementById("email");
-            emailInput.addEventListener("keyup", function () {
-                if (emailInput.value == "alex@gmail.com") {
-                    invalidEmail.style.display="none";
-                    submitButton.addEventListener("click", submitFunction);
-                } else {
-                    invalidEmail.style.display="block";
-                    submitButton.removeEventListener('click', submitFunction);
-                }
-            })
-
-            resetButton = document.getElementById("resetButton");
-            resetButton.addEventListener("click", function() {
-                emailInput.value = "";
-            })
-        </script>
+         
     </body>
 </html>
