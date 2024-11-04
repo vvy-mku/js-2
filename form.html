@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Форма</title>
+        <style>
+            p {
+                margin: 0;
+            }
+            input {
+                margin: 5px 0;
+                padding: 10px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <script src="./form.js"></script>
+        <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; margin-top: 200px; ">
+            <div>
+                <p>Ім'я</p>
+                <input type="text" id="first_name" />
+            </div>
+            <div>
+                <p>Прізвище</p>
+                <input type="text" id="last_name" />
+            </div>
+            <div>
+                <p>Email</p>
+                <input type="text" id="email" />
+            </div>
+            <div>
+                <p>Пароль</p>
+                <input type="password" id="password" />
+            </div>
+            <div>
+                <p>Вік</p>
+                <input type="number" id="age" />
+            </div>
+            <div>
+                <p>Вид діяльності</p>
+                <select name="ocupation_type" id="ocupation_type">
+                    <option value="blank">---</option>
+                    <option value="student">Студент</option>
+                    <option value="worker">Працівник</option>
+                    <option value="retreated">На пенсії</option>
+                </select>
+            </div>
+            <div id="student_block" style="display: none;">
+                <div>
+                    <p>Заклад освіти</p>
+                    <input type="text" name="school" id="school" />
+                </div>
+                <div>
+                    <p>Курс</p>
+                    <input type="number" name="school_year" id="school_year" />
+                </div>
+                <div>
+                    <p>Група</p>
+                    <input type="text" name="school_group" id="school_group" />
+                </div>
+            </div>
+            <div id="worker_block" style="display: none;">
+                <div>
+                    <p>Організація</p>
+                    <input type="text" name="organization" id="organization" />
+                </div>
+                <div>
+                    <p>Посада</p>
+                    <input type="text" name="position" id="position" />
+                </div>
+            </div>
+            <button id="reset">Скинути вказані дані</button>
+            <button>Реєстрація</button>
+        </div>
+    </body>
+</html>
