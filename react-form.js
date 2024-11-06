@@ -18,6 +18,8 @@ window.addEventListener("load", function () {
     },
   };
 
+  // --- Відповідає за зміну об'єкта стану -----
+
   const firstName = this.document.getElementById("first_name");
   firstName.addEventListener("keyup", function () {
     state.firstName = firstName.value;
@@ -87,6 +89,8 @@ window.addEventListener("load", function () {
     render();
   });
 
+  const invalidEmail = this.document.getElementById("invalidEmail");
+
   const reset = this.document.getElementById("reset");
 
   // Reset
@@ -110,6 +114,8 @@ window.addEventListener("load", function () {
     render();
   });
 
+  // --- Відображення елементів форми відповідно до об'єкту стану форми ---
+
   function render() {
     console.log(state);
 
@@ -119,6 +125,15 @@ window.addEventListener("load", function () {
     password.value = state.password;
     age.value = state.age;
     ocupationType.value = state.ocupationType;
+
+    // if (state.email == "") {
+    //   invalidEmail.style.display = "block";
+    // } else {
+    //   invalidEmail.style.display = "none";
+    // }
+
+    // умова ? <умова ісина> : <умова хибна>
+    invalidEmail.style.display = state.email == "" ? "block" : "none";
 
     studentBlock.style.display = "none";
     workerBlock.style.display = "none";
